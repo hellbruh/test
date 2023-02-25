@@ -3,8 +3,8 @@ const fastify = require('fastify')({
   })
  
   // Declare a route
-  fastify.get('/:firstNumber/:secondNumber', function (request, reply) {
-    console.log(request.params)
+  fastify.get('/', function (request, reply) {
+    console.log(request.query)
     let a = request.params.firstNumber 
     let b = request.params.secondNumber
     let  c = Number(a)+Number(b)
